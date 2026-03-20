@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Blurblob from "./Blurblob";
+import Skills from "./components/Skills/Skills";
+import Experience from "./components/Experience/Experience";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <div className="relative pt-10">
         <Navbar />
         <About />
+        <Skills />
+        <Experience />
       </div>
     </div>
   );

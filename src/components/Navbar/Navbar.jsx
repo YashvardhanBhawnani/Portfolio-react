@@ -18,6 +18,11 @@ const Navbar = () => {
   const handleMenuItemClick = (secId) => {
     setActiveSec(secId);
     setIsOpen(false);
+
+    const section = document.getElementById(secId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const menuItems = [
