@@ -1,6 +1,7 @@
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithubSquare, FaLinkedinIn } from "react-icons/fa";
 import { useEffect, useState } from "react";
+
 const Navbar = () => {
   const [activeSec, setActiveSec] = useState("");
   const [isOpen, setIsOpen] = useState(false);
