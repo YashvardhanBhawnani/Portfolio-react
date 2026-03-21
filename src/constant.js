@@ -219,6 +219,6 @@ export const education = [
     date: "May 2018 - July 2019",
     grade: "84.4%",
     desc: "Completed class 10 under the CBSE board, studying Science with Computer.",
-    degree: "CBSE(X) - PCM with Punjabi",
+    degree: "CBSE(X)",
   },
 ];
