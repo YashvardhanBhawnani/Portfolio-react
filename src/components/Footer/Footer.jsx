@@ -55,10 +55,16 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        {/* Copyright Text */}
-        <p className="text-sm lg:text-md text-gray-400 mt-6 capitalize">
-          © 2026 yashvardhan bhawnani. All rights reserved.
-        </p>
+        <div className="text-sm capitalize">
+          {/* quote */}
+          <p className="mt-4 mb-2 italic text-gray-200">
+            "The only time you truly fail, is when you decide to give up"
+          </p>
+          {/* Copyright Text */}
+          <p className="lg:text-md text-gray-400 mt-6">
+            © 2026 yashvardhan bhawnani. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
