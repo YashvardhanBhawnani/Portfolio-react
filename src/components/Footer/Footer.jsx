@@ -13,24 +13,6 @@ const Footer = () => {
         <h2 className="text-xl lg:text-2xl  text-purple-400 capitalize">
           yashvardhan bhawnani
         </h2>
-        {/* nav links */}
-        <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
-          {[
-            { name: "About", id: "about" },
-            { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
-            { name: "Projects", id: "projects" },
-            { name: "Education", id: "education" },
-          ].map((item, idx) => (
-            <button
-              key={idx}
-              onClick={() => handleScroll(item.id)}
-              className="hover:text-purple-500 text-sm sm:text-base my-1 cursor-pointer"
-            >
-              {item.name}
-            </button>
-          ))}
-        </nav>
         {/* social media icons */}
         <div className="flex flex-wrap justify-center space-x-6 mt-6">
           {[
