@@ -15,72 +15,210 @@ import vscodeLogo from './images/tech_logo/vscode.png';
 // Experience Logo
 import yashLogo from "./images/yash_img_hero.png"
 
+// Projects Logo
+import alumniLogo from "./images/project_logo/alumni_logo.png";
+import ecomLogo from "./images/project_logo/ecom_logo.png";
+import portfolioLogo from "./images/project_logo/portfolio_logo.png";
+import todoLogo from "./images/project_logo/tidytrack_logo.png";
+import focusLogo from "./images/project_logo/focus_on_today_logo.png";
+import burgerLogo from "./images/project_logo/burger_landing_page_logo.png";
+import ticLogo from "./images/project_logo/tic_tac_toe_logo.png";
+import loanLogo from "./images/project_logo/loan_ml_logo.png";
+
+// Education Logo
+import bcmLogo from "./images/bcm_school_logo.png";
+import baluniLogo from "./images/baluni_public_school_logo.png";
+import iipsLogo from "./images/iips_logo.png";
+
 // Skills Section
 export const SkillsInfo = [
-    {
-        title: 'Frontend',
-        skills: [
-            { name: 'HTML', logo: htmlLogo },
-            { name: 'CSS', logo: cssLogo },
-            { name: 'JavaScript', logo: javascriptLogo },
-            { name: 'React JS', logo: reactjsLogo },
-            { name: 'Tailwind CSS', logo: tailwindcssLogo },
-        ],
-    },
-    {
-        title: 'Backend',
-        skills: [
-            { name: 'MySQL', logo: mysqlLogo },
-            { name: 'MongoDB', logo: mongodbLogo },
-        ],
-    },
-    {
-        title: 'Languages',
-        skills: [
-            { name: 'C++', logo: cppLogo },
-            { name: 'Java', logo: javaLogo },
-            { name: 'JavaScript', logo: javascriptLogo },
-            { name: 'JavaScript', logo: javascriptLogo },
-        ],
-    },
-    {
-        title: 'Tools',
-        skills: [
-            { name: 'Git', logo: gitLogo },
-            { name: 'GitHub', logo: githubLogo },
-            { name: 'VS Code', logo: vscodeLogo },
-        ],
-    },
+  {
+    title: 'Frontend',
+    skills: [
+      { name: 'HTML', logo: htmlLogo },
+      { name: 'CSS', logo: cssLogo },
+      { name: 'JavaScript', logo: javascriptLogo },
+      { name: 'React JS', logo: reactjsLogo },
+      { name: 'Tailwind CSS', logo: tailwindcssLogo },
+    ],
+  },
+  {
+    title: 'Backend',
+    skills: [
+      { name: 'MySQL', logo: mysqlLogo },
+      { name: 'MongoDB', logo: mongodbLogo },
+    ],
+  },
+  {
+    title: 'Languages',
+    skills: [
+      { name: 'C++', logo: cppLogo },
+      { name: 'Java', logo: javaLogo },
+      { name: 'JavaScript', logo: javascriptLogo },
+      { name: 'JavaScript', logo: javascriptLogo },
+    ],
+  },
+  {
+    title: 'Tools',
+    skills: [
+      { name: 'Git', logo: gitLogo },
+      { name: 'GitHub', logo: githubLogo },
+      { name: 'VS Code', logo: vscodeLogo },
+    ],
+  },
 ];
 
 // experience section
 export const experiences = [
-    {
-        id: 0,
-        img: yashLogo,
-        role: "Frontend Developer",
-        company: "Updated Soon..",
-        date: "20/03/2026",
-        desc: "Relevant Experience: Built multiple responsive websites as part of coursework and personal projects using React, Tailwind CSS, HTML, CSS, and JavaScript.Examples include a Alumni Association Website, E-commerce Website,BG-changer and a Personal Portfolio Website to showcase projects.",
-        skills: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React JS",
-            "Tailwind CSS",
-        ],
-    },
-    {
-        id: 1,
-        img: yashLogo,
-        role: "Backend Developer",
-        company: "Updated Soon..",
-        date: "20/03/2026",
-        desc: "This section will be updated in the future with internships or professional experience.",
-        skills: [
-            "Node JS",
-            "MongoDb",
-            "Redux",
-        ],
-    },
+  {
+    id: 0,
+    img: yashLogo,
+    role: "Frontend Developer",
+    company: "Updated Soon..",
+    date: "20/03/2026",
+    desc: "Relevant Experience: Built multiple responsive websites as part of coursework and personal projects using React, Tailwind CSS, HTML, CSS, and JavaScript.Examples include a Alumni Association Website, E-commerce Website,BG-changer and a Personal Portfolio Website to showcase projects.",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React JS",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    id: 1,
+    img: yashLogo,
+    role: "Updated Soon",
+    company: "Updated Soon..",
+    date: "20/03/2026",
+    desc: "This section will be updated in the future with internships or professional experience.",
+    skills: [
+      "Node JS",
+      "MongoDb",
+      "Redux",
+    ],
+  },
+];
+
+// projects section
+export const projects = [
+  {
+    id: 0,
+    title: "Alumni Association",
+    description:
+      "A responsive Alumni Association platform built with React.js to foster seamless networking between graduates and their alma mater. It features a modern, mobile-first interface with smooth animations, and interactive event portals designed for community engagement.",
+    image: alumniLogo,
+    tags: ["HTML", "CSS", "React.js"],
+    github: "https://github.com/YashvardhanBhawnani/backend_code_clg_project",
+    webapp: "https://alumni-website-project-azure.vercel.app/",
+  },
+
+  {
+    id: 1,
+    title: "SnapStore E-commerce Store",
+    description:
+      "A modern and responsive SnapStore e-commerce platform designed to streamline online shopping with a sleek, intuitive interface. Built with HTML, CSS, and JavaScript, it features a functional shopping cart, and smooth scroll animations, ensuring a seamless and engaging user experience from browsing to checkout.",
+    image: ecomLogo,
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/YashvardhanBhawnani/SnapStore-E-commerce-App",
+    webapp: "https://snapcart-ecom.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Portfolio Website",
+    description:
+      "A professional portfolio website highlighting my skills in web development, projects, and technical expertise. Designed with HTML, CSS , JavaScript to create a responsive, modern, and interactive experience for recruiters and collaborators.",
+    image: portfolioLogo,
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/YashvardhanBhawnani/Personal_portfolio_old",
+    webapp: "https://yashvardhanbhawnanisportfolio.netlify.app/",
+  },
+  // {
+  //   id: 3,
+  //   title: "TidyTrack- Todoie App",
+  //   description:
+  //     "A modern and responsive To-Do application designed to streamline productivity and task management in real-time. Built with React.js and Tailwind CSS, it features persistent data storage via LocalStorage,providing a sleek and reliable user interface for organizing daily goals.",
+  //   image: todoLogo,
+  //   tags: ["React.js", "Tailwind CSS"],
+  //   github:
+  //     "https://github.com/YashvardhanBhawnani/Practice_Projects_Web_Dev/tree/main/Practice_projects/React_Projects/Thapa_Technical_Projects/proj2-TidyTrack-Todo-App",
+  //   webapp: "https://tidytrack18.netlify.app/",
+  // },
+  {
+    id: 4,
+    title: "Focus On Today",
+    description:
+      "A modern and responsive Focus On Today productivity tool designed to help users prioritize their top three daily objectives with zero distractions. Built with HTML, CSS, and JavaScript, it features a minimalist interface, ensuring a streamlined user experience that emphasizes clarity and daily achievement.",
+    image: focusLogo,
+    tags: ["HTML", "CSS", "JavaScript"],
+    github:
+      "https://github.com/YashvardhanBhawnani/Practice_Projects_Web_Dev/tree/main/Practice_projects/FrontEnd_procoder_projects/focus_on_today",
+    webapp: "https://focus-on-todayb.netlify.app/",
+  },
+  {
+    id: 5,
+    title: "Burger Restaurant - Landing Page ",
+    description:
+      "A modern and responsive Burger Restaurant landing page designed to showcase menus and drive customer engagement through a bold, appetizing interface. Built with HTML, CSS, and JavaScript, it features a functional hamburger menu for seamless mobile navigation, smooth scroll animations, and a fully optimized layout that ensures a delicious user experience on any device.",
+    image: burgerLogo,
+    tags: ["HTML", "CSS", "JavaScript"],
+    github:
+      "https://github.com/YashvardhanBhawnani/Practice_Projects_Web_Dev/tree/main/js_proj2_lec111",
+    webapp: "https://burger-yb-menu.netlify.app/#top-picks",
+  },
+  // {
+  //   id: 6,
+  //   title: "Tic-Tac-Toe Game",
+  //   description:
+  //     "A minimalist Tic-Tac-Toe game built with React.js featuring real-time state management and a built-in win-detection algorithm. It offers a smooth, interactive interface and a responsive design for a seamless gaming experience on any device.",
+  //   image: ticLogo,
+  //   tags: ["HTML", "CSS", "React.js"],
+  //   github:
+  //     "https://github.com/YashvardhanBhawnani/Practice_Projects_Web_Dev/tree/main/Practice_projects/React_Projects/piyush_garg/proj2-tic-tac-toe",
+  //   webapp: "https://tic-tac-toe-yb.netlify.app/",
+  // },
+  {
+    id: 7,
+    title: "Loan-Approved-Or-Not Predictor",
+    description:
+      "A modern and responsive Loan Approval Predictor designed to help users evaluate their loan eligibility in real-time. Built with React.js and integrated with Machine Learning APIs, it features a clean data-entry interface, dynamic result visualization, and smooth animations, providing a seamless and user-friendly experience for financial decision-making.",
+    image: loanLogo,
+    tags: ["Python","Machine Learning"],
+    github:
+      "https://github.com/YashvardhanBhawnani/Loan_Approved_or_Not-Predictor",
+    webapp: "#",
+  },
+];
+
+// education section
+export const education = [
+  {
+    id: 0,
+    img: iipsLogo,
+    school: "International Institute of Professional Studies (IIPS), DAVV",
+    date: "Oct 2021 - May 2026",
+    grade: "8.87 CGPA",
+    desc: "Pursuing an Integrated B.Tech-M.Tech Degree in Information Technology , focusing on Advanced Software Development and research-driven problem-solving. Dedicated to building innovative technology solutions and strengthening technical expertise through the seamless transition from foundational engineering to postgraduate specialized projects..",
+    degree: "Master of Technology- M.Tech in IT- B.Tech in IT Dual Degree Course",
+  },
+  {
+    id: 1,
+    img: baluniLogo,
+    school:
+      "Baluni Public School DayalBagh, Sikandarpur,Agra Uttar Pradesh(UP)",
+    date: "May 2020 - October 2021",
+    grade: "90.1%",
+    desc: "Completed class 12 under the CBSE board, studying Physics, Chemistry, Mathematics (PCM).",
+    degree: "CBSE(XII) - PCM with Physical Education",
+  },
+  {
+    id: 2,
+    img: bcmLogo,
+    school:
+      "BCM Senior Secondary School Basant City,Pakhowal Road,Ludhiana Punjab ",
+    date: "May 2018 - July 2019",
+    grade: "84.4%",
+    desc: "Completed class 10 under the CBSE board, studying Science with Computer.",
+    degree: "CBSE(X) - PCM with Punjabi",
+  },
 ];
