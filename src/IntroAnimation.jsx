@@ -7,13 +7,12 @@ const IntroAnimation = ({ onFinish }) => {
     () => [
       "Hello",
       "नमस्ते",
-      "Hola",
-      "Bonjour",
-      "Ciao",
-      "Olá",
-      "Hej",
-      "Hallo",
-      "Salam",
+      "नमस्कार",
+      "નમસ્તે",
+      "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ",
+      "नमो नमः",
+      "प्रणाम",
+      "कसं काय?",
     ],
     [],
   );
@@ -23,7 +22,7 @@ const IntroAnimation = ({ onFinish }) => {
 
   useEffect(() => {
     if (idx < greetings.length - 1) {
-      const id = setInterval(() => setIdx((i) => i + 1), 180);
+      const id = setInterval(() => setIdx((i) => i + 1), 300);
       return () => clearInterval(id);
     } else {
       const t = setTimeout(() => setVisible(false), 1000);
@@ -47,7 +46,7 @@ const IntroAnimation = ({ onFinish }) => {
         >
           <motion.h1
             key={idx}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold"
+            className="text-5xl md:text-7xl font-semibold"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

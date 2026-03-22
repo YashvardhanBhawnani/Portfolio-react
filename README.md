@@ -27,8 +27,8 @@ src/
 │   └── Contact/
 │       └── Contact.jsx     # Contact form component
 ├── images/                 # Images, PDFs, and static files
-├── App.jsx                # Main application container
-└── main.jsx               # React DOM entry point    # Entry point
+├── App.jsx                 # Main application container
+└── main.jsx                # Entry point
 
 ```
 *Made with ❤️ by Yashvardhan Bhawnani*
