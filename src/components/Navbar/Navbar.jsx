@@ -35,24 +35,24 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[15vw] ${isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"}`}
+      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[14vw] ${isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"}`}
     >
       <div className="text-white py-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-md font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white font-sans">Yashvardhan</span>
-          <span className="text-[#8245ec]">/</span>
-          <span className="text-white font-sans">Bhawnani</span>
-          <span className="text-[#8245ec]">&gt;</span>
+        <div className="text-md lg:text-lg cursor-pointer ">
+          <span className="text-muted">&lt;</span>
+          <span className="text-primary font-sans">Yashvardhan</span>
+          <span className="text-foreground text-xl"> / </span>
+          <span className="text-primary font-sans">Bhawnani</span>
+          <span className="text-muted">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-8 text-foreground font-sans">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`hover:text-[#8245ec] ${activeSec === item.id ? "text-[#8245ec]" : ""}`}
+              className={`hover:text-muted text-md ${activeSec === item.id ? "text-muted" : ""}`}
             >
               <button
                 className="cursor-pointer"
@@ -65,12 +65,12 @@ const Navbar = () => {
         </ul>
 
         {/* Social Media Icons */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 text-foreground">
           <a
             href="https://github.com/YashvardhanBhawnani"
             target="_blank"
             rel="noopener noreffer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="hover:text-muted"
           >
             <FaGithubSquare size={28} />
           </a>
@@ -78,22 +78,22 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/yashvardhan-bhawnani-41705a24b/"
             target="_blank"
             rel="noopener noreffer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="hover:text-muted"
           >
             <FaLinkedinIn size={28} />
           </a>
         </div>
 
         {/* Mobile Menu Icons */}
-        <div className="md:hidden">
+        <div className="md:hidden font-sans">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer "
+              className="text-3xl text-primary cursor-pointer "
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-2xl mt-1 text-primary cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -102,12 +102,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5  bg-[#050414]/50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5  bg-[#050414]/30 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
+          <ul className="flex flex-col items-center space-y-4 py-4 text-foreground">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${activeSec === item.id ? "text-[#8245ec]" : ""}`}
+                className={`cursor-pointer font-sans hover:text-foreground ${activeSec === item.id ? "text-muted" : ""}`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
                   {item.label}
