@@ -59,7 +59,9 @@ const Education = () => {
               <p className="mt-4 text-gray-400 font-semibold">
                 Grade : {edu.grade}
               </p>
-              <p className="mt-4 text-base sm:text-md text-gray-400">{edu.desc}</p>
+              <p className="mt-4 text-base sm:text-md text-gray-400">
+                {edu.desc}
+              </p>
             </div>
           </div>
         ))}

@@ -55,7 +55,6 @@ export const SkillsInfo = [
       { name: 'C++', logo: cppLogo },
       { name: 'Java', logo: javaLogo },
       { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'JavaScript', logo: javascriptLogo },
     ],
   },
   {
