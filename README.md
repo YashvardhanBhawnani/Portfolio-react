@@ -12,7 +12,7 @@ A modern, responsive, and high-performance portfolio website built with **React.
   - **Frontend:** React.js
   - **Styling:** Css,Tailwind CSS
   - **Icons:** React Icons
-  - **Deployment:** Vercel / Netlify / GitHub Pages
+  - **Deployment:** Vercel
 
 ## 📂 Project Structure
 ```text
