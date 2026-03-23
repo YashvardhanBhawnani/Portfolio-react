@@ -31,13 +31,14 @@ const Navbar = () => {
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "education", label: "Education" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[14vw] ${isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"}`}
+      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[12vw] ${isScrolled ? "bg-border/80 backdrop-blur-md shadow-md" : "bg-transparent"}`}
     >
-      <div className="text-white py-6 flex justify-between items-center">
+      <div className="text-white py-5 flex justify-between items-center">
         {/* Logo */}
         <div className="text-md lg:text-lg cursor-pointer ">
           <span className="text-muted">&lt;</span>
@@ -48,7 +49,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-foreground font-sans">
+        <ul className="hidden md:flex space-x-9 text-foreground font-sans">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -103,7 +104,7 @@ const Navbar = () => {
       {/* Mobile Menu Items */}
       {isOpen && (
         <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5  bg-[#050414]/30 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-foreground">
+          <ul className="flex flex-col items-center space-y-2.5 py-4 text-foreground">
             {menuItems.map((item) => (
               <li
                 key={item.id}

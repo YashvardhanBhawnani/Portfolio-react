@@ -1,3 +1,9 @@
+// About Section Logos
+import { BsCodeSlash } from "react-icons/bs";
+import { HiOutlineRocketLaunch } from "react-icons/hi2";
+import { PiUsers } from "react-icons/pi";
+import { GoLightBulb } from "react-icons/go";
+
 // Skill Section Logos
 import htmlLogo from './images/tech_logo/html.png';
 import cssLogo from './images/tech_logo/css.png';
@@ -13,7 +19,7 @@ import githubLogo from './images/tech_logo/github.png';
 import vscodeLogo from './images/tech_logo/vscode.png';
 
 // Experience Logo
-import yashLogo from "./images/yash_img_hero.png"
+import yashLogo from "./images/yashimghero.png"
 
 // Projects Logo
 import alumniLogo from "./images/project_logo/alumni_logo.png";
@@ -29,6 +35,35 @@ import loanLogo from "./images/project_logo/loan_ml_logo.png";
 import bcmLogo from "./images/bcm_school_logo.png";
 import baluniLogo from "./images/baluni_public_school_logo.png";
 import iipsLogo from "./images/iips_logo.png";
+
+// Contact Logo
+import { CiMail } from "react-icons/ci";
+import { MdOutlinePhone } from "react-icons/md";
+import { PiMapPinSimpleAreaFill } from "react-icons/pi";
+
+// about section
+export const highlights = [
+  {
+    icon: BsCodeSlash,
+    title: "Clean Code",
+    desc: "Focused on creating user-friendly React applications with clean, scalable code.",
+  },
+  {
+    icon: HiOutlineRocketLaunch,
+    title: "Performance",
+    desc: "Optimizing React applications for speed and smooth user experiences.",
+  },
+  {
+    icon: PiUsers,
+    title: "Collaboration",
+    desc: "Collaborating to turn ideas into real-world React applications.",
+  },
+  {
+    icon: GoLightBulb,
+    title: "Innovation",
+    desc: "Continuously learning modern web technologies and best practices in React.",
+  },
+];
 
 // Skills Section
 export const SkillsInfo = [
@@ -182,7 +217,7 @@ export const projects = [
     description:
       "A modern and responsive Loan Approval Predictor designed to help users evaluate their loan eligibility in real-time. Built with React.js and integrated with Machine Learning APIs, it features a clean data-entry interface, dynamic result visualization, and smooth animations, providing a seamless and user-friendly experience for financial decision-making.",
     image: loanLogo,
-    tags: ["Python","Machine Learning"],
+    tags: ["Python", "Machine Learning"],
     github:
       "https://github.com/YashvardhanBhawnani/Loan_Approved_or_Not-Predictor",
     webapp: "#",
@@ -219,5 +254,27 @@ export const education = [
     grade: "84.4%",
     desc: "Completed class 10 under the CBSE board, studying Science with Computer.",
     degree: "CBSE(X)",
+  },
+];
+
+// contact section
+export const contactInfo = [
+  {
+    icon: CiMail,
+    label: "Email",
+    value: "yashvardhanbhawnani@gmail.com",
+    href: "mailto:yashvardhanbhawnani@gmail.com",
+  },
+  {
+    icon: MdOutlinePhone,
+    label: "Phone",
+    value: "+91-8305281241",
+    href: "tel:+918305281241",
+  },
+  {
+    icon: PiMapPinSimpleAreaFill,
+    label: "Location",
+    value: "Indore, Madhya Pradesh(MP), India",
+    href: "#",
   },
 ];

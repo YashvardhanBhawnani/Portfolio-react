@@ -15,6 +15,7 @@ const IntroAnimation = ({ onFinish }) => {
       "जय देवा",
       "प्रणाम",
       "कसं काय?",
+      "तव्हां कीं आहियो?",
     ],
     [],
   );
@@ -36,7 +37,7 @@ const IntroAnimation = ({ onFinish }) => {
     <AnimatePresence onExitComplete={onFinish}>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-9999 flex items-center justify-center bg-black text-white overflow-hidden"
+          className="fixed inset-0 z-9999 flex items-center justify-center text-primary font-sans bg-linear-to-b from-[#92afd7]/80 via-[#090979]/60 to-background/80s overflow-hidden font-semibold"
           initial={{ y: 0 }}
           exit={{
             y: "-100%",
@@ -48,7 +49,7 @@ const IntroAnimation = ({ onFinish }) => {
         >
           <motion.h1
             key={idx}
-            className="text-5xl md:text-7xl font-semibold"
+            className="text-5xl md:text-7xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

@@ -1,131 +1,99 @@
-import { useState } from "react";
+import { SiGithub } from "react-icons/si";
+import { MdOutlineComputer } from "react-icons/md";
 import { projects } from "../../constant";
 
+
 const Projects = () => {
-  const [selectProj, setSelectedProj] = useState(null);
-
-  const handleOpenModal = (project) => {
-    setSelectedProj(project);
-  };
-
-  const handleCloseModal = (project) => {
-    setSelectedProj(null);
-  };
-
   return (
-    <section
-      id="projects"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[12vw] font-sans relative"
-    >
-      {/* section title */}
-      <div className="text-center mb-19 -mt-10">
-        <h2 className="text-4xl font-bold text-white uppercase">Projects</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-6 text-lg">
-          A showcase of the projects I have worked on, highlighting my skills
-          and experience in various technologies
-        </p>
-      </div>
+    <section id="projects" className="py-32 relative overflow-hidden">
+      {/* Bg glows */}
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-border rounded-full blur-3xl" />
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mx-auto max-w-4xl mb-16 -mt-32 -md:mt-20">
+          <h2 className="text-2xl md:text-4xl font-semibold text-foreground font-sans uppercase animate-fade-in">
+            Featured Work
+          </h2>
+          <div className="w-44 md:w-64 lg:w-76 h-1 bg-muted mx-auto m-4"></div>
+          <h2 className="font-sans text-2xl md:text-5xl md:font-normal mt-8 mb-6 animate-fade-in animation-delay-100 text-foreground">
+            Projects that
+            <span className="font-sans italic font-xs font-medium lg:font-extralight text-muted">
+              {" "}
+              make an impact.
+            </span>
+          </h2>
+          <p className="text-foreground/50 text-sm md:text-lg md:text-foreground/65 md:font-light mt-5 capitalize font-sans animate-fade-in animation-delay-200">
+            A selection of my recent work, from complex web applications to
+            innovative tools that solve real-world problems.
+          </p>
+        </div>
 
-      {/* project grid */}
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
-            onClick={() => handleOpenModal(project)}
-          >
-            <div className="p-4">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-60 object-cover rounded-xl object-top"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-400 lg:text-gray-500 mb-4 pt-2 line-clamp-3">
-                {project.description}
-              </p>
-              <div className="mb-4">
-                {project.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="inline-block bg-[#251f38] text-sm text-purple-400 rounded-full px-3 py-1 mr-2 mb-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* modal container   */}
-      {selectProj && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-xl overflow-hidden relative">
-            <div className="flex justify-end p-4">
-              <button
-                onClick={handleCloseModal}
-                className="text-white text-3xl font-bold hover:text-purple-500"
-              >
-                &times;
-              </button>
-            </div>
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+              style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+            >
+              {/* Image */}
+              <div className="relative overflow-hidden aspect-video">
                 <img
-                  src={selectProj.image}
-                  alt={selectProj.title}
-                  className="lg:w-full w-[95%] object-contain rounded-xl shadow-2xl"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div
+                  className="absolute inset-0 
+                bg-linear-to-t from-card via-card/50
+                 to-transparent opacity-60"
+                />
+                {/* Overlay Links */}
+                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <a
+                    href={project.github}
+                    className="p-3 rounded-full glass transition-all  hover:text-primary"
+                    target="_blank"
+                  >
+                    <SiGithub className="w-5 h-5" size={28} />
+                  </a>
+                  <a
+                    href={project.webapp}
+                     target="_blank"
+                    className="p-3 rounded-full glass hover:bg-card transition-all hover:text-primary"
+                  >
+                    <MdOutlineComputer size={22} />
+                  </a>
+                </div>
               </div>
-              <div className="lg:p-8 p-6">
-                <h3 className="text-lg lg:text-3xl font-semibold text-white mb-3 text-md">
-                  {selectProj.title}
-                </h3>
-                <p className="text-gray-500 mb-6 lg:text-base text-sm">
-                  {selectProj.description}
+
+              {/* Content */}
+              <div className="p-6 space-y-4">
+                <div className="flex items-start justify-between">
+                  <h3 className="text-xl md:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors font-sans">
+                    {project.title}
+                  </h3>
+                </div>
+                <p className=" text-sm font-medium md:text-base text-foreground/45 md:text-foreground/50 font-sans">
+                  {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {selectProj.tags.map((tag, idx) => (
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, tagIdx) => (
                     <span
-                      key={idx}
-                      className="bg-[#251f38] text-sm text-purple-400 rounded-full px-3 py-1 lg:px-3 lg:py-1.5"
+                      key={tagIdx}
+                      className="px-4 py-1 rounded-full bg-surface/80 text-xs font-normal md:text-base border border-muted/60 text-muted hover:border-primary/50 transition-all duration-300 font-sans"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
-                  <a
-                    href={selectProj.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-64 bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-lg text-sm lg:font-semibold text-center"
-                  >
-                    View Code
-                  </a>
-                  <a
-                    href={selectProj.webapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-64 bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-lg text-sm text-center"
-                  >
-                    View Live
-                  </a>
-                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      )}
+      </div>
     </section>
   );
 };
-
 export default Projects;

@@ -1,84 +1,66 @@
-import { Typewriter, Cursor } from "react-simple-typewriter";
-import Tilt from "react-parallax-tilt";
-import profileImg from "../../images/yash_img_hero.png";
-const About = () => {
+import { highlights } from "../../constant";
+
+export const About = () => {
   return (
-    <section
-      id="about"
-      className="py-4 px-[7vw] md:px-[9vw] font-sans mt-10 md:mt-24 lg:mt-22"
-    >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
-        {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-4 md:mt-0">
-          {/* Greeting */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 leading-tight">
-            Hi I Am
-          </h1>
-          <h2 className="text-2xl sm:text-4xl md:text-4xl font-bold text-white mb-4 leading-tight">
-            Yashvardhan Bhawnani
-          </h2>
-          {/* Skills Heading With typing effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
-            <Typewriter
-              words={[
-                "Frontend Developer",
-                "React.js Developer",
-                "Software Developer",
-                "Coder",
-              ]}
-              loop={0}
-              cursor
-              cursorStyle="|"
-              cursorColor="#8245ec"
-              typeSpeed={150}
-              deleteSpeed={55}
-              delaySpeed={1000}
-            />
-          </h3>
-          {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-md text-gray-500 mb-8 mt-5 leading-relaxed">
-            Aspiring full-stack developer with a strong foundation in front-end
-            development and growing expertise in the MERN stack. Skilled in
-            HTML, CSS, JavaScript, and React.js, I am passionate about building
-            responsive, user-friendly web applications while continuously
-            expanding my backend and problem-solving skills.
-          </p>
-          {/* resume btn */}
-          <a
-            href="https://drive.google.com/file/d/1D3T-WtH28td29mze45wHl0Kps6YuZp7w/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-2 px-8  mb-4 rounded-full font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
-            }}
-          >
-            Download CV
-          </a>
-        </div>
-        {/* Right side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <Tilt
-            className=" relative -mt-4 md:-mt-12 w-48 h-48 sm:w-64 sm:h-64 md:w-100 md:h-100 border-6 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
-            <img
-              src={profileImg}
-              alt="hero-img"
-              className="w-full h-full mr-10 rounded-full object-cover object-top drop-shadow-[0_10px_20px_rgba(130,69,236,0.5) ]"
-            />
-          </Tilt>
+    <section id="about" className="py-32 relative overflow-hidden font-sans">
+      <div className="container mx-auto px-6 relative z-10">
+        {/* section title */}
+        <div className="text-center mb-16 -mt-12">
+        <h2 className="text-2xl md:text-4xl font-semibold text-foreground uppercase">
+          about me
+        </h2>
+        <div className="w-30 lg:w-46 h-1 bg-muted mx-auto mt-4"></div>
+        <p className="text-foreground/50 text-sm md:text-lg md:text-foreground/65 md:font-light mt-5 capitalize animate-fade-in animation-delay-200">
+         My journey in tech is driven by continuous learning and hands-on development. Here’s a quick look at my progress so far.
+        </p>
+      </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column */}
+          <div className=" space-y-5 md:space-y-8 -mt-8 md:mt-0">
+            <div className="animate-fade-in">
+            </div>
+            <h2 className="text-2xl md:text-4xl animate-fade-in animation-delay-100 text-secondary-foreground">
+              Building the future,
+              <span className="font-sans italic font-normal leading-tight text-muted">
+                {" "}
+                one component at a time.
+              </span>
+            </h2>
+
+            <div className="space-y-6 text-sm md:space-y-5 lg:text-base text-foreground/60 lg:text-foreground/90 animate-fade-in animation-delay-200 leading-normal lg:leading-relaxed">
+              <p>
+                I’m a passionate frontend-focused developer, building modern web applications with React.js and JavaScript. My journey started with curiosity about how the web works, and it’s now evolving into hands-on experience with real-world projects and growing expertise in full-stack development using the MERN stack.
+              </p>
+              <p>
+                I specialize in React.js and modern JavaScript, building responsive web apps from clean UI to dynamic interfaces. I focus on writing efficient code while creating smooth, user-friendly experiences.
+              </p>
+              <p>
+               When I’m not coding, you’ll find me exploring new technologies, learning and building projects, reading books, listening to music, and growing as a developer.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column - Highlights */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {highlights.map((item, idx) => (
+              <div
+                key={idx}
+                className="glass p-4 lg:p-8 rounded-2xl animate-fade-in w-full"
+                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+              >
+                <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-base lg:text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground/70 md:text-muted-foreground/80">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
-
 export default About;

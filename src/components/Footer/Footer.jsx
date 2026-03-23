@@ -7,10 +7,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+    <footer className="text-foreground py-5 px-[12vw] md:px-[7vw] lg:px-[20vw] -mt-6 lg:mt-0">
       <div className="container mx-auto text-center">
         {/* name */}
-        <h2 className="text-xl lg:text-2xl  text-purple-400 capitalize">
+        <h2 className="text-xl font-semibold font-sans lg:text-3xl  text-foreground capitalize">
           yashvardhan bhawnani
         </h2>
         {/* social media icons */}
@@ -31,19 +31,19 @@ const Footer = () => {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl hover:text-purple-500 transition-transform transform hover:scale-110"
+              className="text-xl md:text-2xl font-semibold hover:text-primary transition-transform transform hover:scale-110 lg:mt-1"
             >
               {item.icon}
             </a>
           ))}
         </div>
-        <div className="text-sm capitalize">
+        <div className="text-sm capitalize ">
           {/* quote */}
-          <p className="mt-4 mb-2 italic text-gray-200">
+          <p className="mt-8 mb-2 italic text-primary md:text-lg font-sans">
             "The only time you truly fail, is when you decide to give up"
           </p>
           {/* Copyright Text */}
-          <p className="lg:text-md text-gray-400 mt-6">
+          <p className="lg:text-base text-foreground/80 mt-6 font-sans" >
             © 2026 yashvardhan bhawnani. All rights reserved.
           </p>
         </div>

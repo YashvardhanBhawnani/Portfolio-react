@@ -1,21 +1,23 @@
 import "./App.css";
 import { useState } from "react";
-// import IntroAnimation from "./IntroAnimation"
+import IntroAnimation from "./IntroAnimation"
 import Navbar from "./components/Navbar/Navbar";
-// import About from "./components/About/About";
-// import Blurblob from "./Blurblob";
-// import Skills from "./components/Skills/Skills";
-// import Experience from "./components/Experience/Experience";
-// import Projects from "./components/Projects/Projects";
-// import Education from "./components/Education/Education";
+import HeroSection from "./components/HomeSection/HomeSection";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
+import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
+import Education from "./components/Education/Education";
 // import Contact from "./components/Contact/Contact";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const [introDone, setIntroDone] = useState(false);
+
   return (
     <>
-      {/* {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />} */}
+      {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
       {/* {introDone && (
         <div className="bg-[#050414]">
           <Blurblob
@@ -35,7 +37,19 @@ function App() {
           </div>
         </div>
       )} */}
-      <Navbar />
+      {introDone && (
+        <div>
+          <Navbar />
+          <HeroSection />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Education />
+          <Contact />
+          <Footer />
+        </div>
+      )}
     </>
   );
 }

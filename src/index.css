@@ -13,7 +13,6 @@
   --color-muted-foreground: #7a8491;
   --color-border: #242b32;
   --radius: 0.75rem;
-  --color-highlight: #ffef4d;
   --color-surface: #1a2329;
   --font-sans: "Poppins", sans-serif;
   --animation-blob: blob 10s infinite;
@@ -94,6 +93,14 @@
       transform: translateX(-50%);
     }
   }
+  @keyframes animated-border {
+    0% {
+      stroke-dashoffset: 400;
+    }
+    100% {
+      stroke-dashoffset: -550;
+    }
+  }
 }
 
 html {
@@ -145,4 +152,29 @@ body {
       color-mix(in srgb, var(--color-primary-foreground) 20%, transparent),
     inset 0 0 20px
       color-mix(in srgb, var(--color-primary-foreground) 5%, transparent);
+}
+.glass {
+  background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+  backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+}
+
+.group:hover .animated-border-path {
+  animation: animated-border 1.5s linear infinite;
+}
+
+.animated-border:hover {
+  background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
 }
