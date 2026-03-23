@@ -18,17 +18,19 @@ A modern, responsive, and high-performance portfolio website built with **React.
 ```text
 src/
 ├── components/
+│   ├── Intro/
+│   │   └── Intro.jsx        # Multilingual greeting animation
 │   ├── Header/
-│   │   └── Header.jsx      # Header section component
+│   │   └── Header.jsx       # Header section component
 │   ├── About/
-│   │   └── About.jsx       # About Me section component
+│   │   └── About.jsx        # About Me section component
 │   ├── Projects/
-│   │   └── Projects.jsx    # Project showcase component
+│   │   └── Projects.jsx     # Project showcase component
 │   └── Contact/
-│       └── Contact.jsx     # Contact form component
-├── images/                 # Images, PDFs, and static files
-├── App.jsx                 # Main application container
-└── main.jsx                # Entry point
+│       └── Contact.jsx      # Contact form component
+├── images/                  # Images, PDFs, and static files
+├── App.jsx                  # Main application container
+└── main.jsx                 # Entry point
 
 ```
 *Made with ❤️ by Yashvardhan Bhawnani*
