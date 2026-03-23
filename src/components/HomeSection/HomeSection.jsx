@@ -47,11 +47,12 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <a href="#contact" className="mt-2">
                 <Button size="lg">
-                  Contact Me <GoArrowUpRight className="w-5 h-5 md:w-7 md:h-7"/>
+                  Contact Me{" "}
+                  <GoArrowUpRight className="w-5 h-5 md:w-7 md:h-7" />
                 </Button>
               </a>
               <a
-                href="https://drive.google.com/file/d/1D3T-WtH28td29mze45wHl0Kps6YuZp7w/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1wxP_YnD9G-68p6v57-R1YnNznTJDi56r/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
