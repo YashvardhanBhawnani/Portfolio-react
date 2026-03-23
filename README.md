@@ -2,7 +2,7 @@
 A modern, responsive, and high-performance portfolio website built with **React.js**. This project showcases my professional journey, technical skills, projects, and provides a direct way to get in touch.
 
 ## 🚀 Features
-
+  - **Multilingual Intro Animation:** A dynamic welcoming sequence featuring "Hello" in various Indian regional languages.
   - **Responsive Design:** Optimized for all screen sizes, from mobile devices to large desktop monitors.
   - **Dynamic Content:** Showcases projects and skills using reusable React components.
   - **Interactive UI:** Smooth transitions and animations for an engaging user experience.
