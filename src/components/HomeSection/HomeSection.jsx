@@ -37,9 +37,9 @@ const HeroSection = () => {
               <p className="text-base lg:text-lg font-sans text-foreground/90 md:text-foreground font-normal md:font-medium max-w-xl  animate-fade-in animation-delay-200 mt-8">
                 Hi, I’m Yashvardhan Bhawnani — a frontend-focused developer
                 specializing in React.js and modern JavaScript. I build
-                responsive, user-friendly web applications and am expanding into
-                full-stack development with the MERN stack to create scalable,
-                end-to-end solutions.
+                responsive, user-friendly web applications and am currently
+                expanding into full-stack development with the MERN stack to
+                create scalable, end-to-end solutions.
               </p>
             </div>
 
