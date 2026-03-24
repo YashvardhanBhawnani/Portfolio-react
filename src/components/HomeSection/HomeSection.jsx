@@ -45,9 +45,9 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <a href="#contact" className="mt-2">
+              <a href="#projects" className="mt-2">
                 <Button size="lg">
-                  Contact Me{" "}
+                  View Projects{" "}
                   <GoArrowUpRight className="w-5 h-5 md:w-7 md:h-7" />
                 </Button>
               </a>
