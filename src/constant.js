@@ -231,9 +231,8 @@ export const education = [
     img: iipsLogo,
     school: "International Institute of Professional Studies (IIPS), DAVV",
     date: "Oct 2021 - May 2026",
-    grade: "8.87 CGPA",
-    desc: "Pursuing an Integrated B.Tech-M.Tech Degree in Information Technology , focusing on Advanced Software Development and research-driven problem-solving. Dedicated to building innovative technology solutions and strengthening technical expertise through the seamless transition from foundational engineering to postgraduate specialized projects..",
-    degree: "Master of Technology- M.Tech in IT- B.Tech in IT Dual Degree Course",
+    grade: "8.83 CGPA",
+    desc: "Completed an Integrated B.Tech-M.Tech Degree in Information Technology, with a focus on Advanced Software Development and research-driven problem-solving. Dedicated to building innovative technology solutions and leveraging strong technical expertise built through foundational engineering and specialized postgraduate projects.",
   },
   {
     id: 1,
