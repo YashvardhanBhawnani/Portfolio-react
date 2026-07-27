@@ -43,7 +43,7 @@ const Footer = () => {
             "The only time you truly fail, is when you decide to give up"
           </p>
           {/* Copyright Text */}
-          <p className="lg:text-base text-foreground/80 mt-6 font-sans" >
+          <p className="lg:text-base text-foreground/80 mt-6 font-sans">
             © 2026 yashvardhan bhawnani. All rights reserved.
           </p>
         </div>
